@@ -1,4 +1,10 @@
-vezbi_programiranje
+vezbi programiranje
 ===================
 
-vezbi_programiranje
+auditoriski
+
+laboratoriski
+
+zbirka_1
+
+zbirka_2
