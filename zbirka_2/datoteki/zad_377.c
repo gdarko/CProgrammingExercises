@@ -58,12 +58,12 @@ int main()
             {
                 inWord = 0;
                 zbor[count] = '\0';
-                totalwords++;
                 if(isAllowedWord(zbor))
                 {
                     printf("%s ", zbor);
                     totalallowed++;
                 }
+                totalwords++;
                 count = 0;
             }
 
