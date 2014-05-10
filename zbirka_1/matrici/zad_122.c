@@ -36,6 +36,7 @@ int main()
             scanf("%d", &array[i][j]);
         }
     }
+// transpose it
 
     for(i = 0; i < m; i++)
     {
