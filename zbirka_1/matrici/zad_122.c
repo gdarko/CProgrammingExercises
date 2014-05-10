@@ -17,8 +17,45 @@
 /* 2 6 -3 9                                                                   */
 /******************************************************************************/
 
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+
 int main()
 {
+    int i, j, n, m;
+    int array[MAX][MAX], newarray[MAX][MAX];
+    printf("Enter rows: \n");
+    scanf("%d", &m);
+    printf("Enter columns: \n");
+    scanf("%d", &n);
+    for(i = 0; i < m; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            scanf("%d", &array[i][j]);
+        }
+    }
+
+    for(i = 0; i < m; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            newarray[j][i] = array[i][j];
+        }
+    }
+
+//printing
+
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < m; j++)
+        {
+            printf("%d ", newarray[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
+
