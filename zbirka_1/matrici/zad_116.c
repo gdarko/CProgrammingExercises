@@ -14,8 +14,40 @@
 /* Simetrichna                                                                */
 /******************************************************************************/
 
+#include <stdio.h>
+
 int main()
 {
+    int i, j, flag = 1, n;
+    int a[10][10];
+    printf("Vnesi koloni i redici: ");
+    scanf("%d", &n);
+
+    printf("Vnesuvaj ja matricata...\n");
+
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            if(a[i][j] != a[j][i])
+                flag = 0;
+        }
+    }
+
+    if(flag) 
+        printf("Simetricna");
+    else 
+        printf("Ne e simetricna");
 
     return 0;
 }
+
