@@ -14,8 +14,30 @@
 /* 5 2                                                                        */
 /******************************************************************************/
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int count_digits(int n)
+{
+    if(n<=0)
+        return 0;
+    return 1+count_digits(n/10);
+}
+
+
 int main()
 {
-
+    int n, a[100], i;
+    scanf("%d", &n);
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    printf("\n");
+    for(i=0; i<n; i++)
+    {
+        printf("a[%d] = %d\n", i, count_digits(a[i]));
+    }
     return 0;
 }
+
