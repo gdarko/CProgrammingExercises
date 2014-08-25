@@ -33,8 +33,10 @@ int main()
             fputc(corrected, output);
         else
             fputc(c, output);
-
     }
+    
+    fclose(input);
+    fclose(output);
     return 0;
 }
 
