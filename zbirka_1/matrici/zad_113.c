@@ -22,8 +22,65 @@
 /* 147 -30                                                                    */
 /******************************************************************************/
 
+#include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
+    int a[100][100], b[100][100], c[100][100];
+    int i, j, k, tmp, m1, n1, m2, n2;
+
+    scanf("%d %d", &m1, &n1);
+
+    scanf("%d %d", &m2, &n2);
+
+    if(n1==m2)
+    {
+        //Array initialization
+        for(i=0; i<m1; i++)
+        {
+            for(j=0; j<n1; j++)
+            {
+                scanf("%d", &a[i][j]);
+            }
+        }
+
+        for(i=0; i<m2; i++)
+        {
+            for(j=0; j<n2; j++)
+            {
+                scanf("%d", &b[i][j]);
+            }
+        }
+        
+        //Multiplication
+        for(i=0; i<m2; i++)
+        {
+            for(j=0; j<n1; j++)
+            {
+                c[i][j] = 0;
+                for(k=0; k<m1; k++)
+                {
+                    c[i][j] = c[i][j] + a[i][k] * b[k][j];
+                }
+            }
+        }
+        
+        //printing the new array
+        for(i=0; i<m2; i++)
+        {
+            for(j=0; j<n2; j++)
+            {
+                printf("%d\t", c[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    else
+    {
+        printf("Multiplication can not be done!\n");
+    }
 
     return 0;
 }
+
